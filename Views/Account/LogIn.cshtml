@@ -1,0 +1,62 @@
+﻿@model CurdApplication.Models.ViewModel.LoginSignUpViewModel
+@{
+    ViewData["Title"] = "LogIn";
+    Layout = "~/Views/Shared/_Layout_Login.cshtml";
+}
+
+<h1>LogIn</h1>
+
+<div class="container">
+    <div class="row mt-lg-5">
+        <div class="col-4 offset-4 border border-primary rounded p-lg-5 pr-5 pb-5">
+            <h2 class="text-primary">@TempData["SucessMessage"]</h2>
+            <form method="post" asp-action="LogIn">
+                <h1 class="text-primary">Login Form</h1>
+                <div class="form-group">
+                    <label asp-for="Username"></label>
+                    <input type="text" asp-for="Username" placeholder="Enter Username" class="form-control" autocomplete="off" />
+                    <span class="text-danger">@TempData["errorUserMessage"]</span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password"></label>
+                    <input id="password"type="password" asp-for="Password" placeholder="Enter Password" class="form-control" autocomplete="off" />
+                    <span class="text-danger">@TempData["errorPasswordMessage"]</span>
+                    <i id="open" style="margin-top:-24px; margin-right:6px;cursor: pointer"></i>
+                    <i id="closed"  style="margin-top:-24px; margin-right:6px;cursor:pointer;display:none"></i>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" asp-for="IsRemember" />
+                    <label asp-for="IsRemember"></label>
+                </div>
+                <div class="form-group"></div>
+                <input type="submit" class="btn btn-block btn-primary mb-2" value="Log In" />
+            </form>
+            <div class="text-center">
+                <a class="text-primary" asp-action="ForgetUsername">Forget Username</a>
+                <br />
+                <a class="text-primary" asp-action="ForgetPassword">Forget Password</a>
+            </div>
+            <div class=" text-center">
+                <a class="text-light btn btn-primary font:weight-bold " asp-action="SignUp" asp-controller="Account">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript">
+    $(documnet).ready(function () {
+        $("#open").click(function ()
+        {
+            $("#open").hide();
+            $("#closed").show();
+            $("#password").attr("type", "text");
+        });
+        $("#closed").click(function ()
+        {
+            $("#closed").hide();
+            $("#open").show();
+            $("#password").attr("type", "password");
+        });
+    });
+</script>
