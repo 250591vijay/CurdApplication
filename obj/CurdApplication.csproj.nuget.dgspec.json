@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\VijayKumarIN\\source\\repos\\CurdApplication\\CurdApplication.csproj": {}
+    "D:\\DEMO\\CurdApplication\\CurdApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\VijayKumarIN\\source\\repos\\CurdApplication\\CurdApplication.csproj": {
+    "D:\\DEMO\\CurdApplication\\CurdApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\VijayKumarIN\\source\\repos\\CurdApplication\\CurdApplication.csproj",
+        "projectUniqueName": "D:\\DEMO\\CurdApplication\\CurdApplication.csproj",
         "projectName": "CurdApplication",
-        "projectPath": "C:\\Users\\VijayKumarIN\\source\\repos\\CurdApplication\\CurdApplication.csproj",
+        "projectPath": "D:\\DEMO\\CurdApplication\\CurdApplication.csproj",
         "packagesPath": "C:\\Users\\VijayKumarIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\VijayKumarIN\\source\\repos\\CurdApplication\\obj\\",
+        "outputPath": "D:\\DEMO\\CurdApplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
