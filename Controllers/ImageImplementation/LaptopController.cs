@@ -14,7 +14,7 @@ namespace CurdApplication.Controllers.ImageImplementation
         public IActionResult Index()
         {
          var data = _context.Laptops.ToList();   
-            return View();
+            return View(data);
         }
     }
 }
