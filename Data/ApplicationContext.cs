@@ -1,5 +1,7 @@
-﻿using CurdApplication.Models;
+﻿using CurdApplication.Migrations;
+using CurdApplication.Models;
 using CurdApplication.Models.Account;
+using CurdApplication.Models.ImageImplementation;
 using Microsoft.EntityFrameworkCore;
 
 namespace CurdApplication.Data
@@ -11,5 +13,6 @@ namespace CurdApplication.Data
         public DbSet<Employee>Employees { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Image> Images { get; set; }
+        public DbSet<Laptop> Laptops { get; set; }
     }
 }
