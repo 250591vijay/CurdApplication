@@ -2,6 +2,7 @@
 using CurdApplication.Models;
 using CurdApplication.Models.Account;
 using CurdApplication.Models.ImageImplementation;
+using CurdApplication.Models.StoreProcedure;
 using Microsoft.EntityFrameworkCore;
 
 namespace CurdApplication.Data
@@ -14,5 +15,8 @@ namespace CurdApplication.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Image> Images { get; set; }
         public DbSet<Laptop> Laptops { get; set; }
+        
+        public DbSet<Wendor> Wendors { get; set; }
+        
     }
 }

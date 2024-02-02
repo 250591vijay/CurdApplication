@@ -4,6 +4,7 @@ using CurdApplication.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CurdApplication.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20240131123333_vend")]
+    partial class vend
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -127,7 +130,7 @@ namespace CurdApplication.Migrations
                     b.ToTable("Laptops");
                 });
 
-            modelBuilder.Entity("CurdApplication.Models.StoreProcedure.Wendor", b =>
+            modelBuilder.Entity("CurdApplication.Models.StoreProcedure.Vendor", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -152,7 +155,7 @@ namespace CurdApplication.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Wendors");
+                    b.ToTable("Vendors");
                 });
 #pragma warning restore 612, 618
         }
