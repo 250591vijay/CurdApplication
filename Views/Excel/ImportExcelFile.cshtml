@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "ImportExcelFile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ImportExcelFile</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <form method="post" asp-action="ImportExcelFile" asp-controller="Excel" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label>Upload Excel File:</label>
+                    <input type="file" name="Formfile" class="form-control"accept=".csv,.xls,.xlsx" />
+                </div>
+                <input type="submit"class="btn btn-sm btn-primary float-end" value="Upload"/>
+            </form>
+        </div>
+    </div>
+</div>
+

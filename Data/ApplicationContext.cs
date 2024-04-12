@@ -1,6 +1,7 @@
 ﻿using CurdApplication.Migrations;
 using CurdApplication.Models;
 using CurdApplication.Models.Account;
+using CurdApplication.Models.Excel;
 using CurdApplication.Models.ImageImplementation;
 using CurdApplication.Models.StoreProcedure;
 using Microsoft.EntityFrameworkCore;
@@ -17,6 +18,7 @@ namespace CurdApplication.Data
         public DbSet<Laptop> Laptops { get; set; }
         
         public DbSet<Wendor> Wendors { get; set; }
+        public DbSet<Customer> Customers { get; set; }
         
     }
 }

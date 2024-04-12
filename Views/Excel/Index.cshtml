@@ -1,0 +1,40 @@
+﻿@model IEnumerable<CurdApplication.Models.Excel.Customer>
+@* object le k aa rhe hai *@
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<div class="container">
+    <a class="btn btn sm btn-primary m-2" asp-action="ImportExcelFile"asp-controller="Excel">UploadFile</a>
+    <p class="text-center text-success font-weight-bold">@TempData["message"]</p>
+    <div class="row">
+        <div class="col-8 offset-2"></div>
+        <table class="table table-bordered">
+            <thead>
+                <tr class="text-center">
+                    <th>Cust_Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Gender</th>
+                    <th>Country</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            @foreach (var d in Model)
+            {
+                <tr class="text-center">
+                    <td>@d.CustomerCode</td>
+                    <td>@d.FirstName</td>
+                    <td>@d.LastName</td>
+                    <td>@d.Gender</td>
+                    <td>@d.Age</td>
+                    <td>@d.Country</td>
+                </tr>
+            }
+        </table>
+    </div>
+
+</div>
