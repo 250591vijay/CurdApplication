@@ -8,7 +8,14 @@
 <h1>Index</h1>
 
 <div class="container">
-    <a class="btn btn sm btn-primary m-2" asp-action="ImportExcelFile"asp-controller="Excel">UploadFile</a>
+   @*  <a class="btn btn sm btn-primary m-2" asp-action="ImportExcelFile"asp-controller="Excel">UploadFile</a>
+ *@
+ <div class="row">
+     <div>
+            <a class="btn btn sm btn-primary m-2" asp-action="ImportExcelFile" asp-controller="Excel">Import Excel</a>|
+            <a class="btn btn sm btn-warning m-2" asp-action="ExportExcel" asp-controller="Excel">Export Excel</a>
+     </div>
+ </div>
     <p class="text-center text-success font-weight-bold">@TempData["message"]</p>
     <div class="row">
         <div class="col-8 offset-2"></div>
