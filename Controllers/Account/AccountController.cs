@@ -31,7 +31,8 @@ namespace CurdApplication.Controllers.Account
 
             {
                 // var data =context.Users.Where(e=> e.Username = _model.Username).SingleOrDefault();
-                var data = _context.Users.Where(e => e.Username == _model.Username).SingleOrDefault();
+                //var data = _context.Users.Where(e => e.Username == _model.Username).SingleOrDefault();
+                var data = _context.Users.Where(e => e.Username == _model.Username).FirstOrDefault();
                 if (data != null)
                 {
                     bool isValid = data.Username == _model.Username && data.Password == _model.Password;

@@ -1,6 +1,7 @@
 ﻿using CurdApplication.Migrations;
 using CurdApplication.Models;
 using CurdApplication.Models.Account;
+using CurdApplication.Models.Cascade;
 using CurdApplication.Models.Excel;
 using CurdApplication.Models.ImageImplementation;
 using CurdApplication.Models.StoreProcedure;
@@ -19,6 +20,10 @@ namespace CurdApplication.Data
         
         public DbSet<Wendor> Wendors { get; set; }
         public DbSet<Customer> Customers { get; set; }
+
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<State> States { get; set; }
+        public DbSet<City> Cities { get; set; }
         
     }
 }
