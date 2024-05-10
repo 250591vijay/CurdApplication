@@ -19,7 +19,7 @@
     <p class="text-center text-success font-weight-bold">@TempData["message"]</p>
     <div class="row">
         <div class="col-8 offset-2"></div>
-        <table class="table table-bordered">
+        <table class="table table-bordered" id="dataTableData">
             <thead>
                 <tr class="text-center">
                     <th>Cust_Id</th>
@@ -45,3 +45,13 @@
     </div>
 
 </div>
+
+@* section script kya karta hai
+jo render file hai  @RenderSection("Script",required:false)
+jquery min.js ko use karenge hum apne layout s use karenge *@
+
+@section scripts
+{
+    <script src="~/js/datatable_file.js"></script>
+}
+

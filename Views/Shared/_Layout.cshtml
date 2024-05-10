@@ -6,6 +6,8 @@
     <title>@ViewData["Title"] - CurdApplication</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link href="~/css/datatablecss/datatables.css" rel="stylesheet" />
+    <link href="~/css/datatablecss/datatables.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/CurdApplication.styles.css" asp-append-version="true" />
 </head>
 <body>
@@ -64,12 +66,18 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - CurdApplication - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+          @*   &copy; 2024 - CurdApplication - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> *@
+            &copy; 2024 - CurdApplication - <a asp-area="" asp-controller="Excel" asp-action="Index">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/datatable/datatables.js"></script>
+    <script src="~/datatable/datatables.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
+
+
